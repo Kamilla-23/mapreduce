@@ -4,8 +4,14 @@ SELECT payment, SUM(sales)
 FROM minipurchases
 GROUP BY payment;
 
-1. Change the mapper so that you calculate the sum for each category (not payment type):
+2. Change the mapper so that you calculate the sum for each category (not payment type):
 
 SELECT category, SUM(sales) 
 FROM minipurchases 
+GROUP BY category;
+
+3. Change the reducer so that you calculate the total number (count) of purchases for each category (not the sum of the sales)
+
+SELECT category, COUNT(*) 
+FROM purchases 
 GROUP BY category;

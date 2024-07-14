@@ -26,8 +26,6 @@ import sys
 # New Line (\n) indicates a new record
 # Output is writing to the standard output
 
-target_categories = {"Computers", "Cameras", "Video Games"}
-
 # For each new line in the standard input (stdin) 
 for line in sys.stdin:
 
@@ -44,5 +42,5 @@ for line in sys.stdin:
     # Key is the payment, value is the sales     
     # With a tab (\t) between key and value
     # New line \n means new record
-        if category in target_categories:
-            sys.stdout.write("{0}\t{1}\n".format(category, sales))
+    
+        sys.stdout.write("{0}\t{1}\n".format(category, sales))

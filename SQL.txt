@@ -37,3 +37,10 @@ SELECT category, COUNT(*)
 FROM purchases 
 GROUP BY category 
 HAVING COUNT(*) > 114;
+
+7. Change the reducer so that you calculate the average sales per category
+
+SELECT category, AVG(sales) 
+FROM minipurchases 
+GROUP BY category;
+

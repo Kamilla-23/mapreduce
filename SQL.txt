@@ -15,3 +15,12 @@ GROUP BY category;
 SELECT category, COUNT(*) 
 FROM purchases 
 GROUP BY category;
+
+4. Change the mapper so that an error is raised when there are not six elements in the tuple
+
+# This SQL command checks that all 6 fields are present in the processes records.
+
+SELECT payment, sales
+FROM minipurchases
+WHERE Date IS NOT NULL AND Time IS NOT NULL AND Item IS NOT NULL AND Category IS NOT NULL AND Sales IS NOT NULL AND Payment IS NOT NULL;
+

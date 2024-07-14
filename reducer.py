@@ -11,9 +11,9 @@ for line in sys.stdin:
         current_count += 1
     else:
         if current_category:
-            sys.stdout.write(f"{current_category}\t{current_count}\n")
+            sys.stdout.write("{0}\t{1}\n".format(current_category, current_count))
         current_category = category
         current_count = 1
 
 if current_category:
-    sys.stdout.write(f"{current_category}\t{current_count}\n")
+    sys.stdout.write("{0}\t{1}\n".format(current_category, current_count))

@@ -31,3 +31,9 @@ FROM minipurchases
 WHERE category IN ('Computers', 'Cameras', 'Video Games') 
 GROUP BY category;
 
+6. Change the reducer, so that only categories are shown, that have a total number (count) of more than 114 purchases
+
+SELECT category, COUNT(*) 
+FROM purchases 
+GROUP BY category 
+HAVING COUNT(*) > 114;

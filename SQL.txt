@@ -24,3 +24,10 @@ SELECT payment, sales
 FROM minipurchases
 WHERE Date IS NOT NULL AND Time IS NOT NULL AND Item IS NOT NULL AND Category IS NOT NULL AND Sales IS NOT NULL AND Payment IS NOT NULL;
 
+5. Change the mapper so that you calculate the sum only for the categories "Computers", "Cameras" and "Video Games"
+
+SELECT category, SUM(sales) 
+FROM minipurchases 
+WHERE category IN ('Computers', 'Cameras', 'Video Games') 
+GROUP BY category;
+

@@ -1,0 +1,11 @@
+1. Initial mapreduce job:
+
+SELECT payment, SUM(sales)
+FROM minipurchases
+GROUP BY payment;
+
+1. Change the mapper so that you calculate the sum for each category (not payment type):
+
+SELECT category, SUM(sales) 
+FROM minipurchases 
+GROUP BY category;
